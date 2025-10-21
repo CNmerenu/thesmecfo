@@ -10,17 +10,11 @@ const nextConfig: NextConfig = {
     ],
   },
   compress: true,
-  swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],
-  },
-  modularizeImports: {
-    '@fortawesome/free-brands-svg-icons': {
-      transform: '@fortawesome/free-brands-svg-icons/{{member}}',
-    },
   },
   productionBrowserSourceMaps: false,
 };
