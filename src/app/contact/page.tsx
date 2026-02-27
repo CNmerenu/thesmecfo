@@ -3,6 +3,7 @@
 import Header from "@/components/Header";
 import Image from "next/image";
 import { useState } from "react";
+import "./contact.css";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ export default function ContactPage() {
   const handleInputChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     setFormData({
       ...formData,
@@ -32,237 +33,351 @@ export default function ContactPage() {
 
   return (
     <>
-      <Header />
-
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-secondary-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            {/* Contact Hero Image */}
-            <div className="w-full max-w-3xl mx-auto h-48 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-large overflow-hidden mb-8">
-              <Image
-                src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Contact us - professional consultation"
-                width={1000}
-                height={192}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <h1 className="section-heading mb-6">Get in Touch</h1>
-            <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-              Ready to transform your business finances? We're here to help you
-              every step of the way.
+      <section className="page-hero">
+        <div className="max-w-7xl mx-auto">
+          <div className="page-hero-content">
+            <span className="label hero-label">Get in Touch</span>
+            <h1>Every great partnership starts with a conversation.</h1>
+            <p className="hero-sub">
+              Tell us about your business. We will listen, ask the right
+              questions, and help you understand exactly where you stand
+              financially and what comes next.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section className="section expect-section">
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <div className="expect-inner">
+            <span className="label section-label">How it works</span>
+            <h2 className="section-title" style={{ textAlign: "left" }}>
+              From first conversation to financial clarity.
+            </h2>
+            <div className="gold-rule gold-rule-left"></div>
+            <p className="body-text" style={{ maxWidth: "600px" }}>
+              Whether you are a founder preparing to raise capital, a diaspora
+              entrepreneur expanding into Africa, or a growing business that has
+              outgrown its current financial setup, here is what happens when
+              you reach out.
+            </p>
+
+            <div className="expect-grid space-x-5">
+              <div className="expect-step">
+                <div className="expect-step-number">01</div>
+                <h4>You reach out</h4>
+                <p>
+                  Fill in the form below or book a call directly. Tell us a
+                  little about your business, where you are, and what you are
+                  trying to achieve. No preparation needed.
+                </p>
+                <div className="step-detail">Takes 2 minutes</div>
+              </div>
+              <div className="expect-step">
+                <div className="expect-step-number">02</div>
+                <h4>We have a conversation</h4>
+                <p>
+                  A 30-minute discovery call where we listen, ask targeted
+                  questions about your financial position, and identify the most
+                  pressing areas of focus for your business.
+                </p>
+                <div className="step-detail">30-minute call</div>
+              </div>
+              <div className="expect-step">
+                <div className="expect-step-number">03</div>
+                <h4>You get a clear plan</h4>
+                <p>
+                  We follow up with a clear recommendation: the right service
+                  for your stage, a defined scope of work, and a tailored
+                  investment proposal.
+                </p>
+                <div className="step-detail">Proposal within 48 hours</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section contact-section">
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div className="contact-grid">
+            <form className="contact-form-card" onSubmit={handleSubmit}>
+              <h3 className="form-heading">Send us a message</h3>
+              <p className="form-intro">
+                Tell us about your business and what you need. The more detail
+                you share, the more useful our first conversation will be.
+              </p>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Full Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your full name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Email Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="you@company.com"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    disabled
+                  />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Phone Number</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+234 or +44"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Business Name</label>
+                  <input
+                    type="text"
+                    name="company"
+                    placeholder="Your business name"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label>Where is your business based?</label>
+                  <select name="location" onChange={handleInputChange}>
+                    <option value="">Select a region</option>
+                    <option>Nigeria</option>
+                    <option>United Kingdom</option>
+                    <option>Other African country</option>
+                    <option>Other (international)</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>Annual Revenue (approximate)</label>
+                  <select name="revenue" onChange={handleInputChange}>
+                    <option value="">Select a range</option>
+                    <option>Pre-revenue / Early stage</option>
+                    <option>Under ₦50M / Under £50K</option>
+                    <option>₦50M - ₦200M / £50K - £200K</option>
+                    <option>₦200M - ₦1B / £200K - £1M</option>
+                    <option>₦1B+ / £1M+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label>What can we help with?</label>
+                <select
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                >
+                  <option value="">Select a service</option>
+                  <optgroup label="Advisory Services">
+                    <option>Financial Health Audit</option>
+                    <option>Monthly CFO Retainer</option>
+                    <option>Cash Flow Rescue</option>
+                    <option>Finance Infrastructure Setup</option>
+                  </optgroup>
+                  <optgroup label="Premium Services">
+                    <option>Investor Readiness Package</option>
+                    <option>CFO-as-a-Service (Embedded)</option>
+                  </optgroup>
+                  <optgroup label="International / Diaspora">
+                    <option>UK Company Accounting</option>
+                    <option>Diaspora Business Advisory</option>
+                    <option>Annual Financial Statements</option>
+                  </optgroup>
+                  <option>Not sure yet / General enquiry</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label>Tell us about your business</label>
+                <textarea
+                  name="message"
+                  placeholder="What does your business do? What stage are you at? What financial challenges are you facing right now?"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
+
+              <button type="submit" className="form-submit" disabled={true}>
+                Send Message →
+              </button>
+            </form>
+
             <div>
-              <div className="card p-8">
-                <h2 className="text-2xl font-bold text-primary-500 mb-6">
-                  Send us a Message
-                </h2>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-dark-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-dark-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      />
-                    </div>
+              <div className="contact-info-card">
+                <h3>Contact details</h3>
+                <div className="contact-info-item">
+                  <div className="contact-info-label">Email</div>
+                  <div className="contact-info-value">
+                    <a href="mailto:hello@thesmecfo.co">hello@thesmecfo.co</a>
                   </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-dark-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-dark-700 mb-2">
-                        Company Name
-                      </label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      />
-                    </div>
+                </div>
+                <div className="contact-info-item">
+                  <div className="contact-info-label">Hours</div>
+                  <div className="contact-info-value">
+                    Monday to Friday
+                    <br />
+                    9:00 AM to 5:00 PM (GMT / WAT)
                   </div>
+                </div>
+                <div className="contact-info-item">
+                  <div className="contact-info-label">Office</div>
+                  <div className="contact-info-value">Lagos, Nigeria</div>
+                </div>
+              </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-dark-700 mb-2">
-                      Subject *
-                    </label>
-                    <select
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="services">Services Information</option>
-                      <option value="pricing">Pricing Questions</option>
-                      <option value="partnership">
-                        Partnership Opportunities
-                      </option>
-                      <option value="support">Technical Support</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-dark-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      name="message"
-                      rows={6}
-                      required
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell us about your business needs..."
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    />
-                  </div>
-
-                  <button type="submit" className="w-full btn-primary">
-                    Send Message
-                  </button>
-                </form>
+              <div className="book-card">
+                <h4>Prefer to book directly?</h4>
+                <p>
+                  Schedule a complimentary 30-minute discovery call at a time
+                  that works for you.
+                </p>
+                <a
+                  href="https://tidycal.com/thesmecfo/discovery-call"
+                  target="_blank"
+                  className="btn-primary"
+                  style={{ width: "100%", justifyContent: "center" }}
+                >
+                  Book a Consultation →
+                </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="space-y-8">
-              <div className="card p-8">
-                <h3 className="text-xl font-bold text-primary-500 mb-6">
-                  Contact Information
-                </h3>
+      <section className="section faq-section">
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <div className="faq-inner">
+            <span className="label section-label">Working with us</span>
+            <h2 className="section-title" style={{ textAlign: "left" }}>
+              What you should know.
+            </h2>
+            <div className="gold-rule gold-rule-left"></div>
 
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg
-                        className="w-5 h-5 text-primary-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary-500">Email</h4>
-                      <p className="text-dark-600">info@thesmecfo.co</p>
-                    </div>
-                  </div>
+            <details className="faq-item">
+              <summary>Is the discovery call really free?</summary>
+              <p className="faq-answer">
+                Yes. The 30-minute discovery call is complimentary and comes
+                with no obligations. It is designed for us to understand your
+                business and for you to understand how we work. If there is a
+                fit, we will recommend the right service and send you a clear
+                proposal.
+              </p>
+            </details>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg
-                        className="w-5 h-5 text-secondary-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-secondary-500">
-                        Phone
-                      </h4>
-                      <p className="text-dark-600">+234 (0) 123 456 7890</p>
-                      <p className="text-dark-600">+234 (0) 987 654 3210</p>
-                    </div>
-                  </div>
+            <details className="faq-item">
+              <summary>
+                I am not sure which service I need. Can you help me decide?
+              </summary>
+              <p className="faq-answer">
+                Absolutely. Most of our clients start with a discovery call
+                where we assess your situation and recommend the best starting
+                point. For many businesses, the Financial Health Audit is the
+                ideal entry point because it gives us (and you) a clear picture
+                of where things stand before committing to ongoing work.
+              </p>
+            </details>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg
-                        className="w-5 h-5 text-accent-600"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-accent-600">Office</h4>
-                      <p className="text-dark-600">Lagos, Nigeria</p>
-                      <p className="text-dark-600">Abuja, Nigeria</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <details className="faq-item">
+              <summary>Do you work with businesses outside Nigeria?</summary>
+              <p className="faq-answer">
+                Yes. We serve businesses across Africa and diaspora
+                entrepreneurs based in the UK, Europe, and North America who are
+                building or investing in African businesses. We are experienced
+                in both Nigerian and UK regulatory environments, and we work
+                remotely as standard.
+              </p>
+            </details>
 
-              <div className="card p-8">
-                <h3 className="text-xl font-bold text-primary-500 mb-6">
-                  Business Hours
-                </h3>
+            <details className="faq-item">
+              <summary>How quickly can we get started?</summary>
+              <p className="faq-answer">
+                For most engagements, we can begin within one to two weeks of
+                signing the engagement letter. For urgent matters such as a Cash
+                Flow Rescue or time-sensitive investor preparation, we can often
+                move faster. Let us know your timeline during the discovery
+                call.
+              </p>
+            </details>
 
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-dark-600">Monday - Friday</span>
-                    <span className="font-medium text-primary-500">
-                      9:00 AM - 6:00 PM
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-dark-600">Saturday</span>
-                    <span className="font-medium text-primary-500">
-                      10:00 AM - 4:00 PM
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-dark-600">Sunday</span>
-                    <span className="font-medium text-dark-400">Closed</span>
-                  </div>
-                </div>
+            <details className="faq-item">
+              <summary>
+                What makes The SME CFO different from a regular accountant?
+              </summary>
+              <p className="faq-answer">
+                We are not an accounting firm. We are a CFO advisory practice.
+                That means we focus on strategic financial leadership: helping
+                you make better decisions with your numbers, not just recording
+                them. Our founder is ACA-qualified with institutional finance
+                experience across treasury, financial control, and corporate
+                banking, and we bring that calibre of thinking to every
+                engagement.
+              </p>
+            </details>
 
-                <div className="mt-6 p-4 bg-success-50 rounded-lg">
-                  <p className="text-success-700 text-sm">
-                    <strong>24/7 Emergency Support</strong> available for
-                    existing clients
-                  </p>
-                </div>
-              </div>
-            </div>
+            <details className="faq-item">
+              <summary>How is the engagement priced?</summary>
+              <p className="faq-answer">
+                Every business is different, and our engagements are scoped to
+                reflect the complexity and requirements of each client. During
+                the discovery call, we take the time to understand your
+                business, the work involved, and the outcomes you need. From
+                there, we provide a detailed proposal with a clear investment
+                figure tailored to your specific situation.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-banner">
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <div className="cta-banner-inner">
+            <span
+              className="label"
+              style={{
+                color: "var(--gold)",
+                display: "block",
+                marginBottom: "20px",
+              }}
+            >
+              Ready?
+            </span>
+            <h2>
+              Walk away from your first call with clarity on where your business
+              stands and a roadmap for what comes next.
+            </h2>
+            <p>
+              The right financial partner changes everything. Let&apos;s start
+              with a conversation.
+            </p>
+            <a
+              href="https://tidycal.com/thesmecfo/discovery-call"
+              target="_blank"
+              className="btn-primary"
+              style={{ fontSize: "0.95rem", padding: "16px 36px" }}
+            >
+              Book a Consultation →
+            </a>
           </div>
         </div>
       </section>

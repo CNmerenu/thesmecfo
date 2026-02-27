@@ -14,8 +14,6 @@ const Header = () => {
     { href: "/services", label: "Services" },
     { href: "/about", label: "About" },
     { href: "/resources", label: "Resources" },
-    { href: "/blog", label: "Blog" },
-    // { href: "/shop", label: "Shop" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -94,7 +92,7 @@ const Header = () => {
   // );
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-dark-800/95 backdrop-blur-xl border-b border-secondary-500/10 px-2 lg:px-2 flex items-center justify-center h-16">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-dark-800/95 backdrop-blur-xl border-b border-secondary-500/10 px-2 lg:px-2 flex items-center justify-center h-20">
       <div className="w-[1560px] px-2 h-full flex items-center justify-center">
         <div className="w-full flex items-center justify-between ">
           <Link href="/" className="flex items-center space-x-2">
