@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Services = () => {
   return (
     <section className="section services-section" id="services">
@@ -20,7 +22,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="services-grid">
+        <div className="services-grid" style={{ marginBottom: "48px" }}>
           <div className="service-card">
             <div className="service-number">
               <svg viewBox="0 0 24 24">
@@ -199,6 +201,12 @@ const Services = () => {
               Learn more &rarr;
             </a> */}
           </div>
+        </div>
+
+        <div className="text-center" style={{ marginTop: "48px" }}>
+          <Link href="/services" className="btn-primary ">
+            View All Services →
+          </Link>
         </div>
       </div>
     </section>

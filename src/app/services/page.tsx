@@ -1,177 +1,454 @@
 import Header from "@/components/Header";
-import Image from "next/image";
 import Link from "next/link";
+import "../services.css";
 
 export default function ServicesPage() {
-  const services = [
-    {
-      title: "Investor Readiness & Funding Preparation",
-      slug: "investor-readiness",
-      description:
-        "Transform your SME into an investment-ready business with comprehensive financial documentation and strategic positioning.",
-      features: [
-        "Investment-Grade Financial Statements",
-        "Professional Pitch Deck",
-        "Business Valuation",
-        "Due Diligence Preparation",
-        "Investor Relations Setup",
-      ],
-      price: "From ₦200,000",
-    },
-    {
-      title: "Financial Statements Preparation",
-      slug: "financial-statements",
-      description:
-        "Professional balance sheets, income statements, and cash flow reports prepared to international standards.",
-      features: [
-        "Balance Sheet",
-        "Income Statement",
-        "Cash Flow Statement",
-        "Notes to Accounts",
-      ],
-      price: "From ₦50,000",
-    },
-    {
-      title: "Performance Reporting & Analytics",
-      slug: "performance-reporting",
-      description:
-        "Comprehensive business performance analysis with actionable insights and strategic recommendations.",
-      features: [
-        "KPI Dashboards",
-        "Trend Analysis",
-        "Benchmarking",
-        "Strategic Insights",
-      ],
-      price: "From ₦75,000",
-    },
-    {
-      title: "Tax Preparation & Planning",
-      slug: "tax-preparation",
-      description:
-        "Expert tax planning and preparation services ensuring compliance with Nigerian tax regulations.",
-      features: [
-        "Corporate Tax",
-        "VAT Returns",
-        "PAYE Management",
-        "Tax Planning",
-      ],
-      price: "From ₦40,000",
-    },
-    {
-      title: "Financial Advisory Services",
-      slug: "financial-advisory",
-      description:
-        "Strategic financial guidance to optimize cash flow, reduce costs, and drive sustainable growth.",
-      features: [
-        "Cash Flow Management",
-        "Cost Optimization",
-        "Growth Strategy",
-        "Risk Assessment",
-      ],
-      price: "From ₦100,000",
-    },
-    {
-      title: "Budgeting & Forecasting",
-      slug: "budgeting-forecasting",
-      description:
-        "Detailed budget planning and financial forecasting to support informed business decisions.",
-      features: [
-        "Annual Budgets",
-        "Cash Flow Forecasts",
-        "Scenario Planning",
-        "Variance Analysis",
-      ],
-      price: "From ₦60,000",
-    },
-    {
-      title: "Compliance & Audit Support",
-      slug: "compliance-audit",
-      description:
-        "Ensure regulatory compliance with comprehensive audit support and documentation management.",
-      features: [
-        "Regulatory Compliance",
-        "Audit Preparation",
-        "Documentation",
-        "Risk Management",
-      ],
-      price: "From ₦80,000",
-    },
-  ];
-
   return (
-    <>
-      <Header />
-
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-secondary-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            {/* Services Hero Image */}
-            <div className="w-full max-w-4xl mx-auto h-64 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-large overflow-hidden mb-8">
-              <Image 
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                alt="Professional financial services team" 
-                width={1200}
-                height={256}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            <h1 className="section-heading mb-6">
-              Professional CFO Services for African SMEs
+    <main>
+      <section className="page-hero">
+        <div className="max-w-7xl mx-auto">
+          <div className="page-hero-content">
+            <span className="label hero-label">Our Services</span>
+            <h1>
+              Strategic financial leadership,
+              <br />
+              tailored to your stage of growth.
             </h1>
-            <p className="text-xl text-dark-600 max-w-3xl mx-auto">
-              Comprehensive financial services designed to help your business
-              thrive in the African market
+            <p className="hero-sub">
+              Every engagement includes a dedicated, ACA-qualified fractional
+              CFO. Financial strategy built around your business, your market,
+              and your stage of growth.
             </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Link key={index} href={`/services/${service.slug}`} className="block">
-                <div className="card p-8 hover:scale-105 transition-transform duration-200 cursor-pointer">
-                  <h3 className="text-2xl font-bold text-primary-500 mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-dark-600 mb-6">{service.description}</p>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-primary-500 mb-3">
-                      What's Included:
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-dark-600">
-                          <svg
-                            className="w-5 h-5 text-success-500 mr-3"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-secondary-500">
-                      {service.price}
-                    </span>
-                    <span className="btn-primary">
-                      Learn More
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
+            <Link href="/contact" className="btn-primary">
+              Book a Consultation →
+            </Link>
           </div>
         </div>
       </section>
-    </>
+
+      <section className="section" style={{ background: "var(--cream)" }}>
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <div className="service-detail" id="financial-health-audit">
+            <div className="service-detail-content">
+              <div
+                className="service-detail-icon"
+                style={{ background: "rgba(77,184,154,0.12)" }}
+              >
+                <svg viewBox="0 0 24 24" style={{ stroke: "#4DB89A" }}>
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h3>Financial Health Audit</h3>
+              <p className="service-detail-desc">
+                A comprehensive assessment of your business's financial health
+                across eight dimensions.
+              </p>
+              <div className="service-detail-includes">
+                <h4>What's included</h4>
+                <ul>
+                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                    2-3 hour deep-dive with founder or finance team
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                    12-month financial statements review
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                    Cash flow analysis and forward forecast
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                    Tax compliance and exposure assessment
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                    Financial Health Score with traffic-light ratings
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                    Prioritised 90-day action plan
+                  </li>
+                </ul>
+              </div>
+              <Link
+                href="https://tidycal.com/thesmecfo/discovery-call"
+                className="btn-primary"
+                style={{ marginTop: "8px" }}
+              >
+                Book a Consultation →
+              </Link>
+            </div>
+            <div className="service-detail-sidebar">
+              <h4>At a glance</h4>
+              <div className="sidebar-item">
+                <div className="sidebar-label">Timeline</div>
+                <div className="sidebar-value">1-2 weeks</div>
+              </div>
+              <div className="sidebar-item">
+                <div className="sidebar-label">Ideal for</div>
+                <div className="sidebar-value">
+                  Businesses seeking clarity on their financial position before
+                  making growth decisions
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="service-detail" id="monthly-cfo-retainer">
+            <div className="service-detail-content">
+              <div
+                className="service-detail-icon"
+                style={{ background: "rgba(200,169,81,0.12)" }}
+              >
+                <svg viewBox="0 0 24 24" style={{ stroke: "#C8A951" }}>
+                  <path d="M18 20V10M12 20V4M6 20v-6" />
+                </svg>
+              </div>
+              <h3>Monthly CFO Retainer</h3>
+              <p className="service-detail-desc">
+                Your fractional CFO becomes a virtual member of your leadership
+                team. Strategic financial oversight that turns your numbers into
+                decisions you can act on with confidence.
+              </p>
+              <div className="service-detail-includes">
+                <h4>What's included</h4>
+                <ul>
+                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                    Monthly financial review meeting (60-90 mins)
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                    Management accounts preparation or review
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                    KPI dashboard with traffic-light indicators
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                    Rolling 13-week cash flow forecast
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                    Budget vs. actual variance analysis
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                    Strategic financial advice on demand
+                  </li>
+                </ul>
+              </div>
+              <Link
+                href="https://tidycal.com/thesmecfo/discovery-call"
+                className="btn-primary"
+                style={{ marginTop: "8px" }}
+              >
+                Book a Consultation →
+              </Link>
+            </div>
+            <div className="service-detail-sidebar">
+              <h4>At a glance</h4>
+
+              <div className="sidebar-item">
+                <div className="sidebar-label">Timeline</div>
+                <div className="sidebar-value">3-month minimum commitment</div>
+              </div>
+              <div className="sidebar-item">
+                <div className="sidebar-label">Ideal for</div>
+                <div className="sidebar-value">
+                  Growing businesses that need consistent financial leadership
+                  without the cost of a full-time CFO
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="service-detail" id="investor-readiness">
+            <div className="service-detail-content">
+              <div
+                className="service-detail-icon"
+                style={{ background: "rgba(94,207,173,0.12)" }}
+              >
+                <svg viewBox="0 0 24 24" style={{ stroke: "#5ECFAD" }}>
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                  <polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
+              <h3>Investor Readiness Package</h3>
+              <p className="service-detail-desc">
+                End-to-end financial preparation for a fundraising round. We
+                build the model, prepare the data room, analyse unit economics,
+                and coach you to present with the confidence investors expect.
+              </p>
+              <div className="service-detail-includes">
+                <h4>What's included</h4>
+                <ul>
+                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                    3-5 year financial model (Excel-based, auditable)
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                    Investor deck financial slides
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                    Due diligence data room preparation
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                    Unit economics analysis (CAC, LTV, payback)
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                    Founder coaching on presenting financials
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                    2 rounds of revisions from investor feedback
+                  </li>
+                </ul>
+              </div>
+              <Link
+                href="https://tidycal.com/thesmecfo/discovery-call"
+                className="btn-primary"
+                style={{ marginTop: "8px" }}
+              >
+                Book a Consultation →
+              </Link>
+            </div>
+            <div className="service-detail-sidebar">
+              <h4>At a glance</h4>
+
+              <div className="sidebar-item">
+                <div className="sidebar-label">Timeline</div>
+                <div className="sidebar-value">4-8 weeks</div>
+              </div>
+              <div className="sidebar-item">
+                <div className="sidebar-label">Ideal for</div>
+                <div className="sidebar-value">
+                  Businesses preparing for a seed, Series A, or growth equity
+                  round
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="service-detail" id="diaspora-advisory">
+            <div className="service-detail-content">
+              <div
+                className="service-detail-icon"
+                style={{ background: "rgba(120,160,230,0.12)" }}
+              >
+                <svg viewBox="0 0 24 24" style={{ stroke: "#78A0E6" }}>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                </svg>
+              </div>
+              <h3>International and Diaspora Advisory</h3>
+              <p className="service-detail-desc">
+                For diaspora entrepreneurs running businesses in Nigeria from
+                the UK, or operating UK-registered companies. Strategic
+                financial oversight from a CFO who understands both environments
+                and can bridge the gap between where you are and where your
+                business operates.
+              </p>
+              <div className="service-detail-includes">
+                <h4>What's included</h4>
+                <ul>
+                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                    Monthly financial review (virtual)
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                    UK or Nigerian financial reporting and compliance readiness
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                    Remote financial controls and oversight framework
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                    Investor and stakeholder reporting
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                    Banking and payment infrastructure guidance
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                    Quarterly strategic review
+                  </li>
+                </ul>
+              </div>
+              <Link
+                href="https://tidycal.com/thesmecfo/discovery-call"
+                className="btn-primary"
+                style={{ marginTop: "8px" }}
+              >
+                Book a Consultation →
+              </Link>
+            </div>
+            <div className="service-detail-sidebar">
+              <h4>At a glance</h4>
+
+              <div className="sidebar-item">
+                <div className="sidebar-label">Timeline</div>
+                <div className="sidebar-value">3-month minimum commitment</div>
+              </div>
+              <div className="sidebar-item">
+                <div className="sidebar-label">Ideal for</div>
+                <div className="sidebar-value">
+                  UK-based founders with Nigerian operations, or businesses
+                  expanding internationally
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="service-detail" id="finance-infrastructure">
+            <div className="service-detail-content">
+              <div
+                className="service-detail-icon"
+                style={{ background: "rgba(200,169,81,0.12)" }}
+              >
+                <svg viewBox="0 0 24 24" style={{ stroke: "#D4B96A" }}>
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg>
+              </div>
+              <h3>Finance Infrastructure Setup</h3>
+              <p className="service-detail-desc">
+                Many growing businesses lack the basic financial architecture
+                required to make sound decisions, attract capital, or pass due
+                diligence. We build it from the ground up.
+              </p>
+              <div className="service-detail-includes">
+                <h4>What's included</h4>
+                <ul>
+                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                    Chart of accounts design and implementation
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                    Accounting policies and procedures manual
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                    Financial reporting framework and templates
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                    Internal controls and approval workflows
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                    Bookkeeping systems setup and staff training
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                    Month-end close process design
+                  </li>
+                </ul>
+              </div>
+              <Link
+                href="https://tidycal.com/thesmecfo/discovery-call"
+                className="btn-primary"
+                style={{ marginTop: "8px" }}
+              >
+                Book a Consultation →
+              </Link>
+            </div>
+            <div className="service-detail-sidebar">
+              <h4>At a glance</h4>
+
+              <div className="sidebar-item">
+                <div className="sidebar-label">Timeline</div>
+                <div className="sidebar-value">4-8 weeks</div>
+              </div>
+              <div className="sidebar-item">
+                <div className="sidebar-label">Ideal for</div>
+                <div className="sidebar-value">
+                  Businesses with no formal financial infrastructure or those
+                  outgrowing informal systems
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="service-detail" id="annual-statements">
+            <div className="service-detail-content">
+              <div
+                className="service-detail-icon"
+                style={{ background: "rgba(160,130,200,0.12)" }}
+              >
+                <svg viewBox="0 0 24 24" style={{ stroke: "#A082C8" }}>
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+              </div>
+              <h3>Annual Financial Statements and Reporting</h3>
+              <p className="service-detail-desc">
+                Preparation of complete annual financial statements delivered to
+                the standard expected by investors, regulators, and
+                institutional partners.
+              </p>
+              <div className="service-detail-includes">
+                <h4>What's included</h4>
+                <ul>
+                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                    Statement of financial position (balance sheet)
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                    Statement of profit or loss and other comprehensive income
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                    Statement of cash flows
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                    Statement of changes in equity
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                    Notes to the financial statements
+                  </li>
+                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                    Director's report preparation
+                  </li>
+                </ul>
+              </div>
+              <Link
+                href="https://tidycal.com/thesmecfo/discovery-call"
+                className="btn-primary"
+                style={{ marginTop: "8px" }}
+              >
+                Book a Consultation →
+              </Link>
+            </div>
+            <div className="service-detail-sidebar">
+              <h4>At a glance</h4>
+
+              <div className="sidebar-item">
+                <div className="sidebar-label">Timeline</div>
+                <div className="sidebar-value">
+                  4-8 weeks from receipt of complete records
+                </div>
+              </div>
+              <div className="sidebar-item">
+                <div className="sidebar-label">Ideal for</div>
+                <div className="sidebar-value">
+                  Businesses requiring IFRS-compliant or FRS 102/105 financial
+                  statements
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-band">
+        <div className="cta-band-inner">
+          <span
+            className="label"
+            style={{
+              color: "var(--teal)",
+              display: "block",
+              marginBottom: "20px",
+            }}
+          >
+            Get Started
+          </span>
+          <h2>Clarity. Structure. Strategic direction.</h2>
+          <p>
+            Every engagement begins with a complimentary 15-minute discovery
+            call. Tell us where your business is today, and we will tell you
+            honestly whether we can help.
+          </p>
+          <Link
+            href="https://tidycal.com/thesmecfo/discovery-call"
+            className="btn-primary"
+          >
+            Book a Consultation &rarr;
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }
