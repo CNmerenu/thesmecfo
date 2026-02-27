@@ -29,19 +29,17 @@ const Footer = () => {
         </div>
         <div className="footer-col">
           <h5>Services</h5>
-          <Link href="#services">Financial Health Audit</Link>
-          <Link href="#">Monthly CFO Retainer</Link>
-          <Link href="#services">Investor Readiness</Link>
-          <Link href="#services">Diaspora Advisory</Link>
-          <Link href="#services">Finance Infrastructure</Link>
-          <Link href="#services">Annual Statements</Link>
+          <Link href="/services">Financial Health Audit</Link>
+          <Link href="/services">Monthly CFO Retainer</Link>
+          <Link href="/services">Investor Readiness</Link>
+          <Link href="/services">Diaspora Advisory</Link>
+          <Link href="/services">Finance Infrastructure</Link>
+          <Link href="/services">Annual Statements</Link>
         </div>
         <div className="footer-col">
           <h5>Company</h5>
-          <Link href="about.html">About Us</Link>
-          <Link href="resources.html">Resources</Link>
-          <Link href="blog.html">Blog</Link>
-          <Link href="contact.html">Contact</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/contact">Contact</Link>
         </div>
         <div className="footer-col">
           <h5>Connect</h5>
