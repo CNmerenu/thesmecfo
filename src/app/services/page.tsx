@@ -19,7 +19,7 @@ export default function ServicesPage() {
               and your stage of growth.
             </p>
             <Link href="/contact" className="btn-primary">
-              Book a Consultation →
+              Contact Us
             </Link>
           </div>
         </div>
@@ -45,22 +45,34 @@ export default function ServicesPage() {
               <div className="service-detail-includes">
                 <h4>What's included</h4>
                 <ul>
-                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                  <li
+                    style={{ "--dot-color": "#4DB89A" } as React.CSSProperties}
+                  >
                     2-3 hour deep-dive with founder or finance team
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                  <li
+                    style={{ "--dot-color": "#4DB89A" } as React.CSSProperties}
+                  >
                     12-month financial statements review
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                  <li
+                    style={{ "--dot-color": "#4DB89A" } as React.CSSProperties}
+                  >
                     Cash flow analysis and forward forecast
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                  <li
+                    style={{ "--dot-color": "#4DB89A" } as React.CSSProperties}
+                  >
                     Tax compliance and exposure assessment
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                  <li
+                    style={{ "--dot-color": "#4DB89A" } as React.CSSProperties}
+                  >
                     Financial Health Score with traffic-light ratings
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#4DB89A" }}>
+                  <li
+                    style={{ "--dot-color": "#4DB89A" } as React.CSSProperties}
+                  >
                     Prioritised 90-day action plan
                   </li>
                 </ul>
@@ -107,22 +119,34 @@ export default function ServicesPage() {
               <div className="service-detail-includes">
                 <h4>What's included</h4>
                 <ul>
-                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                  <li
+                    style={{ "--dot-color": "#C8A951" } as React.CSSProperties}
+                  >
                     Monthly financial review meeting (60-90 mins)
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                  <li
+                    style={{ "--dot-color": "#C8A951" } as React.CSSProperties}
+                  >
                     Management accounts preparation or review
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                  <li
+                    style={{ "--dot-color": "#C8A951" } as React.CSSProperties}
+                  >
                     KPI dashboard with traffic-light indicators
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                  <li
+                    style={{ "--dot-color": "#C8A951" } as React.CSSProperties}
+                  >
                     Rolling 13-week cash flow forecast
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                  <li
+                    style={{ "--dot-color": "#C8A951" } as React.CSSProperties}
+                  >
                     Budget vs. actual variance analysis
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#C8A951" }}>
+                  <li
+                    style={{ "--dot-color": "#C8A951" } as React.CSSProperties}
+                  >
                     Strategic financial advice on demand
                   </li>
                 </ul>
@@ -172,22 +196,34 @@ export default function ServicesPage() {
               <div className="service-detail-includes">
                 <h4>What's included</h4>
                 <ul>
-                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                  <li
+                    style={{ "--dot-color": "#5ECFAD" } as React.CSSProperties}
+                  >
                     3-5 year financial model (Excel-based, auditable)
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                  <li
+                    style={{ "--dot-color": "#5ECFAD" } as React.CSSProperties}
+                  >
                     Investor deck financial slides
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                  <li
+                    style={{ "--dot-color": "#5ECFAD" } as React.CSSProperties}
+                  >
                     Due diligence data room preparation
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                  <li
+                    style={{ "--dot-color": "#5ECFAD" } as React.CSSProperties}
+                  >
                     Unit economics analysis (CAC, LTV, payback)
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                  <li
+                    style={{ "--dot-color": "#5ECFAD" } as React.CSSProperties}
+                  >
                     Founder coaching on presenting financials
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#5ECFAD" }}>
+                  <li
+                    style={{ "--dot-color": "#5ECFAD" } as React.CSSProperties}
+                  >
                     2 rounds of revisions from investor feedback
                   </li>
                 </ul>
@@ -239,22 +275,34 @@ export default function ServicesPage() {
               <div className="service-detail-includes">
                 <h4>What's included</h4>
                 <ul>
-                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                  <li
+                    style={{ "--dot-color": "#78A0E6" } as React.CSSProperties}
+                  >
                     Monthly financial review (virtual)
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                  <li
+                    style={{ "--dot-color": "#78A0E6" } as React.CSSProperties}
+                  >
                     UK or Nigerian financial reporting and compliance readiness
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                  <li
+                    style={{ "--dot-color": "#78A0E6" } as React.CSSProperties}
+                  >
                     Remote financial controls and oversight framework
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                  <li
+                    style={{ "--dot-color": "#78A0E6" } as React.CSSProperties}
+                  >
                     Investor and stakeholder reporting
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                  <li
+                    style={{ "--dot-color": "#78A0E6" } as React.CSSProperties}
+                  >
                     Banking and payment infrastructure guidance
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#78A0E6" }}>
+                  <li
+                    style={{ "--dot-color": "#78A0E6" } as React.CSSProperties}
+                  >
                     Quarterly strategic review
                   </li>
                 </ul>
@@ -305,22 +353,34 @@ export default function ServicesPage() {
               <div className="service-detail-includes">
                 <h4>What's included</h4>
                 <ul>
-                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                  <li
+                    style={{ "--dot-color": "#D4B96A" } as React.CSSProperties}
+                  >
                     Chart of accounts design and implementation
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                  <li
+                    style={{ "--dot-color": "#D4B96A" } as React.CSSProperties}
+                  >
                     Accounting policies and procedures manual
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                  <li
+                    style={{ "--dot-color": "#D4B96A" } as React.CSSProperties}
+                  >
                     Financial reporting framework and templates
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                  <li
+                    style={{ "--dot-color": "#D4B96A" } as React.CSSProperties}
+                  >
                     Internal controls and approval workflows
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                  <li
+                    style={{ "--dot-color": "#D4B96A" } as React.CSSProperties}
+                  >
                     Bookkeeping systems setup and staff training
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#D4B96A" }}>
+                  <li
+                    style={{ "--dot-color": "#D4B96A" } as React.CSSProperties}
+                  >
                     Month-end close process design
                   </li>
                 </ul>
@@ -373,22 +433,34 @@ export default function ServicesPage() {
               <div className="service-detail-includes">
                 <h4>What's included</h4>
                 <ul>
-                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                  <li
+                    style={{ "--dot-color": "#A082C8" } as React.CSSProperties}
+                  >
                     Statement of financial position (balance sheet)
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                  <li
+                    style={{ "--dot-color": "#A082C8" } as React.CSSProperties}
+                  >
                     Statement of profit or loss and other comprehensive income
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                  <li
+                    style={{ "--dot-color": "#A082C8" } as React.CSSProperties}
+                  >
                     Statement of cash flows
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                  <li
+                    style={{ "--dot-color": "#A082C8" } as React.CSSProperties}
+                  >
                     Statement of changes in equity
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                  <li
+                    style={{ "--dot-color": "#A082C8" } as React.CSSProperties}
+                  >
                     Notes to the financial statements
                   </li>
-                  <li style={{ ["--dot-color" as any]: "#A082C8" }}>
+                  <li
+                    style={{ "--dot-color": "#A082C8" } as React.CSSProperties}
+                  >
                     Director's report preparation
                   </li>
                 </ul>

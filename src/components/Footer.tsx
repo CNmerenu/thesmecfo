@@ -100,9 +100,9 @@ const Footer = () => {
           &copy; 2026 The S.M.E CFO Ltd &middot; RC 8307073 &middot; Lagos
         </span>
         <div className="footer-legal">
-          <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/terms-and-conditions">Terms and Conditions</Link>
-          <Link href="/cookie-policy">Cookie Policy</Link>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms and Conditions</Link>
+          <Link href="/cookies">Cookie Policy</Link>
         </div>
       </div>
     </footer>

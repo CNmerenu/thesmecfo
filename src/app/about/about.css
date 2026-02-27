@@ -1,0 +1,48 @@
+:root {
+  --navy: #0f1f3d;
+  --navy-deep: #080e1c;
+  --navy-mid: #152a4a;
+  --teal: #4db89a;
+  --gold: #c8a951;
+}
+
+.cta-band {
+  background: linear-gradient(165deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+  padding: clamp(80px, 10vh, 120px) clamp(24px, 8vw, 120px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-band::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 81, 0.3), transparent);
+}
+
+.cta-band-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-band h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.cta-band p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
