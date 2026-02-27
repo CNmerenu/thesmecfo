@@ -1,124 +1,108 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faXTwitter,
-  faLinkedin,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 
 const Footer = () => {
-  const footerSections = {
-    services: [
-      { href: "/services/investor-readiness", label: "Investor Readiness" },
-      { href: "/services/financial-statements", label: "Financial Statements" },
-      {
-        href: "/services/performance-reporting",
-        label: "Performance Reporting",
-      },
-      { href: "/services/tax-preparation", label: "Tax Preparation" },
-    ],
-    products: [
-      { href: "/shop?category=templates", label: "Financial Templates" },
-      { href: "/shop?category=courses", label: "Online Courses" },
-      { href: "/shop?category=tools", label: "Business Tools" },
-      { href: "/shop?category=guides", label: "Expert Guides" },
-    ],
-    resources: [
-      { href: "/blog", label: "Blog" },
-      { href: "/resources/free-training", label: "Free Training" },
-      { href: "/resources/faqs", label: "FAQs" },
-      { href: "/resources/calculators", label: "Free Calculators" },
-    ],
-    company: [
-      { href: "/about", label: "About Us" },
-      { href: "/contact", label: "Contact" },
-      { href: "/careers", label: "Careers" },
-    ],
-  };
-
   return (
-    <footer className="bg-dark-800 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8">
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <Image
-                src="/assets/logo-light.svg"
-                alt="The SME CFO logo"
-                width={200}
-                height={60}
-                className="h-12 w-auto"
-              />
-            </div>
-            <p className="text-dark-300 mb-6 max-w-md">
-              Empowering African SMEs with enterprise-grade financial services.
-              Professional CFO expertise made accessible and affordable.
-            </p>
-            <div className="flex space-x-4">
-              <Link
-                href="https://x.com/thesmecfo/"
-                target="_blank"
-                className="text-dark-400 hover:text-secondary-400 transition-colors"
-              >
-                <FontAwesomeIcon icon={faXTwitter} className="w-6 h-6" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/thesmecfo/"
-                target="_blank"
-                className="text-dark-400 hover:text-secondary-400 transition-colors"
-              >
-                <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />
-              </Link>
-              <a
-                href="https://www.instagram.com/thesmecfo/"
-                target="_blank"
-                className="text-dark-400 hover:text-secondary-400 transition-colors"
-              >
-                <FontAwesomeIcon icon={faInstagram} className="w-6 h-6" />
-              </a>
-            </div>
+    <footer>
+      <div className="footer-grid">
+        <div className="footer-brand">
+          <div className="footer-logo">
+            <Image
+              src="/assets/logo-dark.svg"
+              alt="The SME CFO Logo"
+              width={180}
+              height={60}
+              className="h-14 w-auto"
+            />
           </div>
-
-          {Object.entries(footerSections).map(([sectionName, links]) => (
-            <div key={sectionName}>
-              <h3 className="font-semibold text-lg mb-4 capitalize">
-                {sectionName}
-              </h3>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-dark-300 hover:text-secondary-400 transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="border-t border-dark-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-dark-400 text-sm">
-            © 2025 The SME CFO. All rights reserved.
+          <p
+            style={{
+              color: "rgba(255, 255, 255, 0.35)",
+              fontSize: "0.82rem",
+              lineHeight: "1.6",
+              marginTop: "12px",
+              maxWidth: "280px",
+            }}
+          >
+            Laying the foundation for Africa's next unicorns.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+        </div>
+        <div className="footer-col">
+          <h5>Services</h5>
+          <Link href="#services">Financial Health Audit</Link>
+          <Link href="#">Monthly CFO Retainer</Link>
+          <Link href="#services">Investor Readiness</Link>
+          <Link href="#services">Diaspora Advisory</Link>
+          <Link href="#services">Finance Infrastructure</Link>
+          <Link href="#services">Annual Statements</Link>
+        </div>
+        <div className="footer-col">
+          <h5>Company</h5>
+          <Link href="about.html">About Us</Link>
+          <Link href="resources.html">Resources</Link>
+          <Link href="blog.html">Blog</Link>
+          <Link href="contact.html">Contact</Link>
+        </div>
+        <div className="footer-col">
+          <h5>Connect</h5>
+          <Link href="mailto:hello@thesmecfo.co">hello@thesmecfo.co</Link>
+          <div style={{ display: "flex", gap: "16px", marginTop: "12px" }}>
             <Link
-              href="/privacy-policy"
-              className="text-dark-400 hover:text-secondary-400 text-sm transition-colors"
+              href="https://www.linkedin.com/company/thesmecfo/"
+              target="_blank"
+              aria-label="LinkedIn"
+              style={{ display: "inline-flex", padding: "0" }}
             >
-              Privacy Policy
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="rgba(255,255,255,0.35)"
+              >
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
             </Link>
             <Link
-              href="/terms-of-service"
-              className="text-dark-400 hover:text-secondary-400 text-sm transition-colors"
+              href="https://x.com/thesmecfo/"
+              target="_blank"
+              aria-label="X"
+              style={{ display: "inline-flex", padding: "0" }}
             >
-              Terms of Service
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="rgba(255,255,255,0.35)"
+              >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </Link>
+            <Link
+              href="https://www.instagram.com/thesmecfo"
+              target="_blank"
+              aria-label="Instagram"
+              style={{ display: "inline-flex", padding: "0" }}
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="rgba(255,255,255,0.35)"
+              >
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
             </Link>
           </div>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <span>
+          &copy; 2026 The S.M.E CFO Ltd &middot; RC 8307073 &middot; Lagos
+        </span>
+        <div className="footer-legal">
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/terms-and-conditions">Terms and Conditions</Link>
+          <Link href="/cookie-policy">Cookie Policy</Link>
         </div>
       </div>
     </footer>

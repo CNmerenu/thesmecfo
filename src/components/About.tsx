@@ -1,205 +1,98 @@
-import Link from "next/link";
 import Image from "next/image";
 
 const About = () => {
   return (
-    <>
-      <section className="py-20 bg-gradient-to-br from-secondary-50 to-primary-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="section-heading mb-6">
-                Empowering African SMEs with
-                <span className="text-gradient"> Professional Finance</span>
-              </h2>
-              <p className="text-lg text-dark-600 mb-6 leading-relaxed">
-                The SME CFO bridges the gap between small businesses and
-                enterprise-level financial expertise. We understand the unique
-                challenges facing African SMEs and provide tailored solutions
-                that drive growth.
+    <section className="section about-section" id="about">
+      <div className="max-w-7xl mx-auto">
+        <div className="about-hero-block">
+          <div className="about-hero-left">
+            <span className="label" style={{ color: "var(--teal)" }}>
+              About Us
+            </span>
+            <h2
+              className="section-title"
+              style={{
+                textAlign: "left",
+                color: "var(--navy)",
+                fontSize: "clamp(2rem, 3.5vw, 2.8rem)",
+              }}
+            >
+              The SME CFO.
+              <br />
+              Laying the foundation for Africa's next unicorns.
+            </h2>
+          </div>
+          <div className="about-hero-right">
+            <p className="body-text">
+              The SME CFO is a CFO advisory firm built on a single conviction:
+              that African businesses deserve the same calibre of financial
+              leadership that powers the world's most successful companies.
+            </p>
+            <p className="body-text">
+              We provide world-class CFO advisory services that help founders
+              make better financial decisions, grow sustainably, and raise
+              capital with confidence. We are building the financial
+              infrastructure on which Africa's next generation of great
+              businesses will scale.
+            </p>
+          </div>
+        </div>
+
+        {/* FOUNDER PROFILE */}
+        <div className="about-grid" style={{ marginTop: "80px" }}>
+          <div className="about-photo" style={{ background: "none" }}>
+            <Image
+              src="/assets/images/cfo-headshot.png"
+              alt="Olubunmi Nmerenu, ACA - Founder, The SME CFO"
+              width={1000}
+              height={1000}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top",
+                borderRadius: "4px",
+              }}
+            />
+            <div className="photo-name">Olubunmi Nmerenu, ACA</div>
+          </div>
+          <div className="about-content">
+            <span className="label section-label">Founder</span>
+            <h2 className="section-title" style={{ textAlign: "left" }}>
+              Meet the Founder
+            </h2>
+            <div className="gold-rule gold-rule-left"></div>
+            <p className="body-text">
+              Olubunmi is a Chartered Accountant and corporate finance
+              strategist with nearly a decade of experience at one of the
+              world's leading financial institutions, advising on treasury
+              strategy, structuring and executing complex, high-value
+              transactions, and managing strategic priorities across global
+              markets.
+            </p>
+            <p className="body-text">
+              Over the course of her career, she has executed
+              multi-billion-pound transactions, including a £2.3 billion
+              acquisition and a £750 million share buyback programme.
+            </p>
+            <p className="body-text">
+              Through The SME CFO, she now partners with African and
+              diaspora-owned businesses to build the financial systems,
+              controls, and strategic discipline required to grow, scale
+              sustainably, raise capital, and compete on a global stage.
+            </p>
+            <div className="pull-quote">
+              <p>
+                African businesses deserve the same calibre of financial
+                leadership and capital that powers Silicon Valley. We're
+                building the bridge to make that happen.
               </p>
-              <p className="text-lg text-dark-600 mb-8 leading-relaxed">
-                Our platform combines cutting-edge technology with deep local
-                market knowledge to deliver swift, reliable, and affordable CFO
-                services across Nigeria and beyond.
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-6 mb-8">
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-success-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-primary-500 mb-1">
-                      Local Expertise
-                    </h4>
-                    <p className="text-dark-600 text-sm">
-                      Deep understanding of African business landscape
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-success-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-primary-500 mb-1">
-                      Swift Delivery
-                    </h4>
-                    <p className="text-dark-600 text-sm">
-                      Fast turnaround times without compromising quality
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-success-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-primary-500 mb-1">
-                      Enterprise Grade
-                    </h4>
-                    <p className="text-dark-600 text-sm">
-                      Professional standards for businesses of all sizes
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-success-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-primary-500 mb-1">
-                      Affordable Access
-                    </h4>
-                    <p className="text-dark-600 text-sm">
-                      CFO expertise at SME-friendly pricing
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <Link href="/about" className="btn-secondary">
-                Learn More About Us
-              </Link>
-            </div>
-
-            <div className="relative">
-              {/* Team Image Placeholder */}
-              <div className="w-full h-64 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-large overflow-hidden mb-6">
-                <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Professional team collaborating on financial solutions"
-                  width={800}
-                  height={256}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-large p-6">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-primary-500 mb-2">
-                    Why Choose Us?
-                  </h3>
-                  <p className="text-dark-600">Trusted by SMEs across Africa</p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-primary-50 rounded-lg">
-                    <span className="font-medium text-primary-500">
-                      Response Time
-                    </span>
-                    <span className="text-xl font-bold text-primary-500">
-                      24hrs
-                    </span>
-                  </div>
-
-                  <div className="flex items-center justify-between p-3 bg-secondary-50 rounded-lg">
-                    <span className="font-medium text-secondary-500">
-                      Client Satisfaction
-                    </span>
-                    <span className="text-xl font-bold text-secondary-500">
-                      98%
-                    </span>
-                  </div>
-
-                  <div className="flex items-center justify-between p-3 bg-accent-50 rounded-lg">
-                    <span className="font-medium text-accent-600">
-                      Countries Served
-                    </span>
-                    <span className="text-xl font-bold text-accent-600">
-                      5+
-                    </span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
 export default About;
-
-// Add custom CSS for the scroll animation
-const styles = `
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-`;
-
-if (typeof document !== "undefined") {
-  const styleSheet = document.createElement("style");
-  styleSheet.textContent = styles;
-  document.head.appendChild(styleSheet);
-}
